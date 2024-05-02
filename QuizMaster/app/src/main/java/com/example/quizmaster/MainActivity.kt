@@ -23,69 +23,70 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         val botonGeografia = findViewById<Button>(R.id.geografia)
-        botonHistoria.setOnClickListener {
+        botonGeografia.setOnClickListener {
             val intent = Intent(this, SegundaActividad::class.java)
             intent.putExtra("categoria", "Geografia")
             startActivity(intent)
         }
         val botonDeporte = findViewById<Button>(R.id.deporte)
-        botonHistoria.setOnClickListener {
+        botonDeporte.setOnClickListener {
             val intent = Intent(this, SegundaActividad::class.java)
             intent.putExtra("categoria", "Deporte")
             startActivity(intent)
         }
         val botonEntretenimiento = findViewById<Button>(R.id.entretenimiento)
-        botonHistoria.setOnClickListener {
+        botonEntretenimiento.setOnClickListener {
             val intent = Intent(this, SegundaActividad::class.java)
             intent.putExtra("categoria", "Entretenimiento")
             startActivity(intent)
         }
         val botonTecnologia = findViewById<Button>(R.id.tecnologia)
-        botonHistoria.setOnClickListener {
+        botonTecnologia.setOnClickListener {
             val intent = Intent(this, SegundaActividad::class.java)
             intent.putExtra("categoria", "Tecnologia")
             startActivity(intent)
         }
         val botonArteyCultura = findViewById<Button>(R.id.arte_y_cultura)
-        botonHistoria.setOnClickListener {
+        botonArteyCultura.setOnClickListener {
             val intent = Intent(this, SegundaActividad::class.java)
             intent.putExtra("categoria", "ArteyCultura")
             startActivity(intent)
         }
         val botonLiteratura = findViewById<Button>(R.id.literatura)
-        botonHistoria.setOnClickListener {
+        botonLiteratura.setOnClickListener {
             val intent = Intent(this, SegundaActividad::class.java)
             intent.putExtra("categoria", "Literatura")
             startActivity(intent)
         }
         val botonFilosofia = findViewById<Button>(R.id.filosofia)
-        botonHistoria.setOnClickListener {
+        botonFilosofia.setOnClickListener {
             val intent = Intent(this, SegundaActividad::class.java)
             intent.putExtra("categoria", "Filosofia")
             startActivity(intent)
         }
         val botonGastronomia = findViewById<Button>(R.id.gastronomia)
-        botonHistoria.setOnClickListener {
+        botonGastronomia.setOnClickListener {
             val intent = Intent(this, SegundaActividad::class.java)
             intent.putExtra("categoria", "Gastronomia")
             startActivity(intent)
         }
         val botonMusica = findViewById<Button>(R.id.musica)
-        botonHistoria.setOnClickListener {
+        botonMusica.setOnClickListener {
             val intent = Intent(this, SegundaActividad::class.java)
             intent.putExtra("categoria", "Musica")
             startActivity(intent)
         }
         val botonIdiomas = findViewById<Button>(R.id.idiomas)
-        botonHistoria.setOnClickListener {
+        botonIdiomas.setOnClickListener {
             val intent = Intent(this, SegundaActividad::class.java)
             intent.putExtra("categoria", "Idiomas")
             startActivity(intent)
         }
         val botonMedicina = findViewById<Button>(R.id.medicina)
-        botonHistoria.setOnClickListener {
+        botonMedicina.setOnClickListener {
             val intent = Intent(this, SegundaActividad::class.java)
             intent.putExtra("categoria", "Medicina")
             startActivity(intent)
         }
     }
+}

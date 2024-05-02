@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Definición de un tema de la aplicación -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Colores personalizados, tamaños de fuente, etc. -->
     </style>
 </resources>
