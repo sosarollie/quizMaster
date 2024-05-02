@@ -1,9 +1,14 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.QuizMaster" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 
-    <style name="Theme.QuizMaster" parent="Base.Theme.QuizMaster" />
+    <style name="Theme.MyApplication" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Botones">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/boton_redondo</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
 </resources>
