@@ -1,10 +1,13 @@
 package com.example.quizmaster
+
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.ComponentActivity
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
+import android.util.Log
+
 
 class SegundaActividad : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,15 +22,18 @@ class SegundaActividad : ComponentActivity() {
 
         if (jsonStr != null && categoriaSeleccionada != null) {
             try {
-                val jsonArray = JSONArray(jsonStr)
                 val preguntasCategoria = mutableListOf<JSONObject>()
 
-                for (i in 0 until jsonArray.length()) {
-                    val pregunta = jsonArray.getJSONObject(i)
-                    if (pregunta.has(categoriaSeleccionada)) {
-                        val preguntasCategoriaArray = pregunta.getJSONArray(categoriaSeleccionada)
+                val jsonObject = JSONObject(jsonStr)
+                val keys = jsonObject.keys()
+
+                while (keys.hasNext()) {
+                    val categoria = keys.next()
+                    if (categoria == categoriaSeleccionada) {
+                        val preguntasCategoriaArray = jsonObject.getJSONArray(categoria)
                         for (j in 0 until preguntasCategoriaArray.length()) {
                             preguntasCategoria.add(preguntasCategoriaArray.getJSONObject(j))
+                            Log.d("Se agrego un preg", preguntasCategoriaArray.getJSONObject(j).toString())
                         }
                     }
                 }
