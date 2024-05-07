@@ -11,6 +11,9 @@ import android.util.Log
 import android.graphics.Color
 import android.widget.Button
 import android.widget.ImageButton
+import android.os.Handler
+import android.os.Looper
+import androidx.core.content.ContextCompat
 
 
 class SegundaActividad : ComponentActivity() {
@@ -21,6 +24,7 @@ class SegundaActividad : ComponentActivity() {
         private lateinit var botonesOpcion: List<TextView>
         private var opcionCorrectaIndex: Int? = null
         private var preguntasCategoria = mutableListOf<JSONObject>()
+        private val mainHandler = Handler(Looper.getMainLooper())
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -110,7 +114,9 @@ class SegundaActividad : ComponentActivity() {
                 botonesOpcion[opcionSeleccionada].setBackgroundColor(Color.GRAY)
             }
             botonesOpcion[opcionCorrectaIndex!!].setBackgroundColor(Color.GREEN)
-            mostrarSiguientePregunta(preguntasCategoria)
+            mainHandler.postDelayed({
+                mostrarSiguientePregunta(preguntasCategoria)
+            },2000)
         }
 
         // Método para cargar el archivo JSON
@@ -129,10 +135,10 @@ class SegundaActividad : ComponentActivity() {
         val opcionUno = findViewById<Button>(R.id.opcion1)
         val opcionDos = findViewById<Button>(R.id.opcion2)
         val opcionTres = findViewById<Button>(R.id.opcion3)
-        opcionCero.setBackgroundResource(R.color.orange)
-        opcionUno.setBackgroundResource(R.color.orange)
-        opcionDos.setBackgroundResource(R.color.orange)
-        opcionTres.setBackgroundResource(R.color.orange)
+        opcionCero.backgroundTintList = ContextCompat.getColorStateList(this, R.color.orange)
+        opcionUno.backgroundTintList=ContextCompat.getColorStateList(this,R.color.orange)
+        opcionDos.backgroundTintList=ContextCompat.getColorStateList(this,R.color.orange)
+        opcionTres.backgroundTintList=ContextCompat.getColorStateList(this,R.color.orange)
         }
     }
 
