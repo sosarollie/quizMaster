@@ -3211,6 +3211,7 @@ int id clip_vertical 0x7f080077
 int id clockwise 0x7f080078
 int id closest 0x7f080079
 int id collapseActionView 0x7f08007a
+int id comodin 0x7f080205
 int id compress 0x7f08007b
 int id confirm_button 0x7f08007c
 int id constraint 0x7f08007d
@@ -3570,7 +3571,7 @@ int id title 0x7f0801de
 int id titleDividerNoCustom 0x7f0801df
 int id title_template 0x7f0801e0
 int id toggle 0x7f0801e1
-int id toolbar_bottom 0x7f080205
+int id toolbar_bottom 0x7f0801e2
 int id top 0x7f0801e3
 int id topPanel 0x7f0801e4
 int id touch_outside 0x7f0801e5

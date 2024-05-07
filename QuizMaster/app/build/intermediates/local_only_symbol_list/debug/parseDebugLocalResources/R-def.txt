@@ -17,6 +17,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 id arte_y_cultura
 id ciencia
+id comodin
 id deporte
 id entretenimiento
 id filosofia
