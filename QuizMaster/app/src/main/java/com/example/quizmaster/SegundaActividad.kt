@@ -144,7 +144,7 @@ class SegundaActividad : ComponentActivity() {
             seUsoComodin = true
             preguntasRestantes++
             val btnComodin = findViewById<ImageButton>(R.id.comodin)
-            btnComodin.visibility= View.INVISIBLE // una vez que se usa el comodin lo cambio de color
+            btnComodin.visibility= View.INVISIBLE
             botonesOpcion[opcionCorrectaIndex!!].setBackgroundColor(Color.GRAY)
             mainHandler.postDelayed({
             mostrarSiguientePregunta(preguntasCategoria)
