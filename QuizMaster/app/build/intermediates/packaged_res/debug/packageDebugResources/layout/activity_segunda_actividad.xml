@@ -27,7 +27,7 @@
         android:gravity="center"
         android:orientation="vertical"
         tools:context=".SegundaActividad">
-        <!--preguntar text vacio ""-->
+
         <TextView
             android:id="@+id/textViewPregunta"
             android:layout_width="wrap_content"
@@ -72,6 +72,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/contador"
             android:drawableStart="@android:drawable/star_big_on"
             android:text="0"
             android:padding="5dp"/>

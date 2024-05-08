@@ -3216,6 +3216,7 @@ id comodin
 id compress
 id confirm_button
 id constraint
+id contador
 id container
 id content
 id contentPanel
