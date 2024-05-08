@@ -14,6 +14,7 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.os.Handler
 import android.os.Looper
+import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
@@ -143,7 +144,7 @@ class SegundaActividad : ComponentActivity() {
             seUsoComodin = true
             preguntasRestantes++
             val btnComodin = findViewById<ImageButton>(R.id.comodin)
-            btnComodin.setBackgroundColor(Color.TRANSPARENT) // una vez que se usa el comodin lo cambio de color
+            btnComodin.visibility= View.INVISIBLE // una vez que se usa el comodin lo cambio de color
             botonesOpcion[opcionCorrectaIndex!!].setBackgroundColor(Color.GRAY)
             mainHandler.postDelayed({
             mostrarSiguientePregunta(preguntasCategoria)
