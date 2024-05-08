@@ -14,6 +14,7 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.os.Handler
 import android.os.Looper
+import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
@@ -74,6 +75,8 @@ class SegundaActividad : ComponentActivity() {
     private fun mostrarSiguientePregunta(preguntasCategoria: List<JSONObject>) {
         if (preguntasRestantes > 0) {
             botonesOpcion.forEach { it.isEnabled = true }
+            val btnComodin = findViewById<ImageButton>(R.id.comodin)
+            btnComodin.isEnabled=true
             restablecerColoresBotones()
             var preguntaSeleccionada: JSONObject? = null
             do {
@@ -95,7 +98,6 @@ class SegundaActividad : ComponentActivity() {
                 }
             }
 
-            val btnComodin = findViewById<ImageButton>(R.id.comodin)
             btnComodin.setOnClickListener {
                 usarComodin()
             }
@@ -113,6 +115,8 @@ class SegundaActividad : ComponentActivity() {
 
     private fun comprobarRespuesta(opcionSeleccionada: Int) {
         botonesOpcion.forEach { it.isEnabled = false }
+        val btnComodin = findViewById<ImageButton>(R.id.comodin)
+        btnComodin.isEnabled=false
         if (opcionSeleccionada != opcionCorrectaIndex) {
             botonesOpcion[opcionSeleccionada].setBackgroundColor(Color.RED)
             botonesOpcion[opcionCorrectaIndex!!].setBackgroundColor(Color.GRAY)
@@ -143,7 +147,7 @@ class SegundaActividad : ComponentActivity() {
             seUsoComodin = true
             preguntasRestantes++
             val btnComodin = findViewById<ImageButton>(R.id.comodin)
-            btnComodin.setBackgroundColor(Color.TRANSPARENT) // una vez que se usa el comodin lo cambio de color
+            btnComodin.visibility= View.INVISIBLE
             botonesOpcion[opcionCorrectaIndex!!].setBackgroundColor(Color.GRAY)
             mainHandler.postDelayed({
             mostrarSiguientePregunta(preguntasCategoria)

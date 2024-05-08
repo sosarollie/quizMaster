@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         val botonArteyCultura = findViewById<Button>(R.id.arte_y_cultura)
         botonArteyCultura.setOnClickListener {
             val intent = Intent(this, SegundaActividad::class.java)
-            intent.putExtra("categoria", "ArteyCultura")
+            intent.putExtra("categoria", "Arte y cultura")
             startActivity(intent)
             finish()
         }
