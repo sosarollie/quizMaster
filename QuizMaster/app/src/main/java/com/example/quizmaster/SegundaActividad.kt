@@ -75,13 +75,13 @@ class SegundaActividad : ComponentActivity() {
     private fun mostrarSiguientePregunta(preguntasCategoria: List<JSONObject>) {
         if (preguntasRestantes > 0) {
             botonesOpcion.forEach { it.isEnabled = true }
-            val btnComodin = findViewById<ImageButton>(R.id.comodin)
+            val btnComodin = findViewById<Button>(R.id.comodin)
             btnComodin.isEnabled=true
             restablecerColoresBotones()
             var preguntaSeleccionada: JSONObject? = null
             do {
                 preguntaSeleccionada = preguntasCategoria.random()
-            } while (preguntasSeleccionadas.contains(preguntaSeleccionada))
+          } while (preguntasSeleccionadas.contains(preguntaSeleccionada))
 
             val preguntaText = preguntaSeleccionada?.getString("question")
             val opcionesArray = preguntaSeleccionada?.getJSONArray("options")
@@ -115,7 +115,7 @@ class SegundaActividad : ComponentActivity() {
 
     private fun comprobarRespuesta(opcionSeleccionada: Int) {
         botonesOpcion.forEach { it.isEnabled = false }
-        val btnComodin = findViewById<ImageButton>(R.id.comodin)
+        val btnComodin = findViewById<Button>(R.id.comodin)
         btnComodin.isEnabled=false
         if (opcionSeleccionada != opcionCorrectaIndex) {
             botonesOpcion[opcionSeleccionada].setBackgroundColor(Color.RED)
@@ -146,7 +146,7 @@ class SegundaActividad : ComponentActivity() {
         if (!seUsoComodin) {
             seUsoComodin = true
             preguntasRestantes++
-            val btnComodin = findViewById<ImageButton>(R.id.comodin)
+            val btnComodin = findViewById<Button>(R.id.comodin)
             btnComodin.visibility= View.INVISIBLE
             botonesOpcion[opcionCorrectaIndex!!].setBackgroundColor(Color.GRAY)
             mainHandler.postDelayed({

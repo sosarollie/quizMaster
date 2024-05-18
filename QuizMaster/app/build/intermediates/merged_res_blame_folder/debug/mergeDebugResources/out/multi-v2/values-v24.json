@@ -4,7 +4,7 @@
             "outputFile": "com.example.quizmaster.app-mergeDebugResources-29:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Intel\\.gradle\\caches\\transforms-3\\4ce64730b86c763a51a77a38d4ea85ef\\transformed\\material-1.11.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\jesus\\.gradle\\caches\\transforms-4\\bac316905e1db2fac47d1a3046ebff9d\\transformed\\material-1.11.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Intel\\.gradle\\caches\\transforms-3\\2ac9cbef8e382bf54e0e0047b0e35a15\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\jesus\\.gradle\\caches\\transforms-4\\310261daa775a77fc087cfa3c9070f52\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
