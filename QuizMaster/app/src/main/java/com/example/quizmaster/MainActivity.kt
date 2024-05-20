@@ -12,9 +12,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val botones = listOf(
-                R.id.ciencia, R.id.historia, R.id.geografia, R.id.deporte, R.id.entretenimiento,
-        R.id.tecnologia, R.id.arte_y_cultura, R.id.literatura, R.id.filosofia,
-        R.id.gastronomia, R.id.musica, R.id.idiomas, R.id.medicina
+            R.id.ciencia, R.id.historia, R.id.geografia, R.id.deporte, R.id.entretenimiento,
+            R.id.tecnologia, R.id.arte_y_cultura, R.id.literatura, R.id.filosofia,
+            R.id.gastronomia, R.id.musica, R.id.idiomas, R.id.medicina
         )
 
         botones.forEach { id ->
