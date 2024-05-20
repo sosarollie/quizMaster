@@ -44,7 +44,6 @@ class SegundaActividad : ComponentActivity() {
 
         if (jsonStr != null && categoriaSeleccionada != null) {
             try {
-
                 val jsonObject = JSONObject(jsonStr)
                 val keys = jsonObject.keys()
 
@@ -59,6 +58,7 @@ class SegundaActividad : ComponentActivity() {
                                 preguntasCategoriaArray.getJSONObject(j).toString()
                             )
                         }
+
                     }
                 }
 
