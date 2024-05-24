@@ -40,6 +40,7 @@ id textViewPregunta
 id toolbar_bottom
 layout activity_main
 layout activity_segunda_actividad
+layout instrucciones
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name

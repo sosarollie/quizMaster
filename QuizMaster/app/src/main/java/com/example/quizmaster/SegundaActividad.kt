@@ -1,6 +1,7 @@
 package com.example.quizmaster
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
@@ -29,6 +30,7 @@ class SegundaActividad : ComponentActivity() {
     private var opcionCorrectaIndex: Int? = null
     private var preguntasCategoria = mutableListOf<JSONObject>()
     private val mainHandler = Handler(Looper.getMainLooper())
+    private var cantPreguntas=0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,6 +76,7 @@ class SegundaActividad : ComponentActivity() {
 
     private fun mostrarSiguientePregunta(preguntasCategoria: List<JSONObject>) {
         if (preguntasRestantes > 0) {
+            cantPreguntas++
             botonesOpcion.forEach { it.isEnabled = true }
             val btnComodin = findViewById<ImageButton>(R.id.comodin)
             btnComodin.isEnabled=true
@@ -109,7 +112,7 @@ class SegundaActividad : ComponentActivity() {
         } else {
             val respuestasCorrectas = findViewById<TextView>(R.id.contador)
             val rc = respuestasCorrectas.text.toString().toInt()
-            finDelJuego(rc)
+            finDelJuego(rc,cantPreguntas,seUsoComodin)
         }
     }
 
@@ -164,14 +167,33 @@ class SegundaActividad : ComponentActivity() {
         opcionDos.setBackgroundResource(R.drawable.boton_redondo)
         opcionTres.setBackgroundResource(R.drawable.boton_redondo)
     }
-    private fun finDelJuego (contador:Int){
-        val mensaje="¡Se termino el juego! Respuestas correctas:$contador"
-        Toast.makeText(this,mensaje,Toast.LENGTH_LONG).show()
+    private fun finDelJuego (contador:Int,cantPreg:Int,seUsoComo:Boolean){
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Se terminó el juego")
 
-        mainHandler.postDelayed({
-            val intent=Intent(this,MainActivity::class.java)
+        val comodin = if (seUsoComo) {
+            "se usó"
+        } else {
+            "no se usó"
+        }
+
+        builder.setMessage("Respuestas: $contador/$cantPreg\nEl comodín $comodin")
+
+        builder.setPositiveButton("Aceptar") { dialog, which ->
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }, 2000)
+        }
+
+        builder.setNegativeButton("Reiniciar") { dialog, which ->
+            preguntasRestantes = 3
+            seUsoComodin = false
+            cantPreguntas = 0
+            mostrarSiguientePregunta(preguntasCategoria)
+            preguntasSeleccionadas.clear()
+        }
+
+        builder.setCancelable(false)
+        builder.show()
     }
 }
