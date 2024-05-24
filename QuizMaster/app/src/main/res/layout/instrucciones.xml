@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="75dp"
+    android:layout_gravity="center"
+    android:text="Reglas del juego:"
+    android:textAlignment="center"
+    android:textColor="@color/black"
+    android:textSize="40dp" />
+
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="560dp"
+android:layout_gravity="center"
+android:text="Elija una categoria, luego tendra que contestar tres preguntas de esa categoria, tendra cuatro opciones y una sola sera la correcta, cuenta con el uso de un comodin, el cual puede saltear una pregunta en caso de usarlo, al final de juego podra volver a jugar la misma categoria o volver al menu principal"
+android:textAlignment="center"
+android:textColor="@color/black"
+android:textSize="30dp" />
+
+<Button
+android:layout_width="150dp"
+android:layout_height="80dp"
+android:layout_gravity="center"
+android:text="VOLVER" />
+</LinearLayout>
