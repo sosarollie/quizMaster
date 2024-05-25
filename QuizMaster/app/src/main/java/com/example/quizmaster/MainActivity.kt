@@ -2,8 +2,12 @@ package com.example.quizmaster
 
 import android.os.Bundle
 import android.content.Intent
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         botones.forEach { id ->
             findViewById<Button>(id).setOnClickListener(listener)
         }
+
     }
     private val categoriasMap = mapOf(
         R.id.ciencia to "Ciencia",
@@ -43,5 +48,20 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("categoria", categoria)
             startActivity(intent)
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val mi: MenuInflater = menuInflater;
+        mi.inflate(R.menu.menu_main, menu);
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        if (id == R.id.helpButton) {
+            val intent = Intent(this, AyudaActivity::class.java)
+            startActivity(intent)
+        }
+        return true
     }
 }

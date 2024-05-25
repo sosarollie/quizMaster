@@ -3,20 +3,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/textViewCategoria"
-        android:padding="15dp"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_weight="1"
-        android:textSize="20dp"
-        android:textFontWeight="600"
         android:background="@color/light_gray"
-        android:text=""
-        android:textColor="@color/white"/>
+        android:gravity="end"
+        >
+        <TextView
+            android:id="@+id/textViewCategoria"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingEnd="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textFontWeight="600"
+            android:text=""
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/helpButton"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@android:drawable/ic_menu_help" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toolbar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/light_gray"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/contador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@android:drawable/star_big_on"
+            android:gravity="left"
+            android:padding="5dp"
+            android:text="0"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/comodin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saltear Pregunta"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="20dp"
+            android:text="10s"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/main"
@@ -59,46 +117,6 @@
             style="@style/Botones"
             android:layout_height="wrap_content"></Button>
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/toolbar_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:background="@color/light_gray"
-        android:padding="10dp">
-
-        <TextView
-            android:id="@+id/contador"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableStart="@android:drawable/star_big_on"
-            android:gravity="left"
-            android:padding="5dp"
-            android:text="0"
-            android:textSize="20dp" />
-
-        <Button
-            android:id="@+id/comodin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Saltear Pregunta"
-            android:paddingRight="10dp"
-            android:paddingLeft="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:paddingRight="20dp"
-            android:text="10s"
-            android:textSize="20dp" />
 
     </LinearLayout>
 

@@ -3306,6 +3306,7 @@ id group_divider
 id grouping
 id groups
 id header_title
+id helpButton
 id hide_ime_id
 id hideable
 id historia
@@ -3722,6 +3723,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_ayuda
 layout activity_main
 layout activity_segunda_actividad
 layout custom_dialog
@@ -3803,6 +3805,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu menu_main
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

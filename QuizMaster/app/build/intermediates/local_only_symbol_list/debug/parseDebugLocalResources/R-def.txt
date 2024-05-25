@@ -24,6 +24,7 @@ id entretenimiento
 id filosofia
 id gastronomia
 id geografia
+id helpButton
 id historia
 id idiomas
 id literatura
@@ -38,8 +39,10 @@ id tecnologia
 id textViewCategoria
 id textViewPregunta
 id toolbar_bottom
+layout activity_ayuda
 layout activity_main
 layout activity_segunda_actividad
+menu menu_main
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:2:1-31:12
-INJECTED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:2:1-31:12
-INJECTED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:2:1-31:12
-INJECTED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:2:1-31:12
+ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:2:1-35:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\jesus\.gradle\caches\transforms-4\bac316905e1db2fac47d1a3046ebff9d\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\jesus\.gradle\caches\transforms-4\62ee10f8d07145c81818aacc7469dd50\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\jesus\.gradle\caches\transforms-4\c9606394af3b8b43e8c203f918ac7603\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -56,8 +56,8 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\jesus\.gradle\caches\transform
 	xmlns:android
 		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:5:5-29:19
-INJECTED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:5:5-29:19
+ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:5:5-33:19
+INJECTED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:5:5-33:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\jesus\.gradle\caches\transforms-4\bac316905e1db2fac47d1a3046ebff9d\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\jesus\.gradle\caches\transforms-4\bac316905e1db2fac47d1a3046ebff9d\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\jesus\.gradle\caches\transforms-4\62ee10f8d07145c81818aacc7469dd50\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -96,32 +96,40 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\je
 		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:13:9-51
 	android:dataExtractionRules
 		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.example.quizmaster.SegundaActividad
-ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:15:9-17:40
+activity#com.example.quizmaster.AyudaActivity
+ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:15:9-18:46
 	android:exported
 		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:17:13-37
-	android:name
-		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:16:13-45
-activity#com.example.quizmaster.MainActivity
-ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:18:9-28:20
-	android:label
-		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:21:13-39
-	android:exported
-		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:20:13-36
 	android:theme
-		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:22:13-44
+		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:18:13-44
 	android:name
-		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:19:13-41
+		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:16:13-42
+activity#com.example.quizmaster.SegundaActividad
+ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:19:9-21:40
+	android:exported
+		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:20:13-45
+activity#com.example.quizmaster.MainActivity
+ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:22:9-32:20
+	android:label
+		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:25:13-39
+	android:exported
+		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:24:13-36
+	android:theme
+		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:26:13-44
+	android:name
+		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:23:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:23:13-27:29
+ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:24:17-69
+ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:28:17-69
 	android:name
-		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:24:25-66
+		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:26:17-77
+ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:26:27-74
+		ADDED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml:30:27-74
 uses-sdk
 INJECTED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\jesus\quizMaster\QuizMaster\app\src\main\AndroidManifest.xml

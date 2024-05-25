@@ -28,6 +28,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.MyApplication" >
         <activity
+            android:name="com.example.quizmaster.AyudaActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name="com.example.quizmaster.SegundaActividad"
             android:exported="false" />
         <activity

@@ -79,6 +79,7 @@ class SegundaActividad : ComponentActivity() {
             cantPreguntas++
             botonesOpcion.forEach { it.isEnabled = true }
             val btnComodin = findViewById<Button>(R.id.comodin)
+            val btnAyuda = findViewById<ImageButton>(R.id.helpButton)
             btnComodin.isEnabled=true
             restablecerColoresBotones()
             var preguntaSeleccionada: JSONObject? = null
@@ -99,6 +100,11 @@ class SegundaActividad : ComponentActivity() {
                 button.setOnClickListener {
                     comprobarRespuesta(index)
                 }
+            }
+
+            btnAyuda.setOnClickListener{
+                val intent = Intent(this, AyudaActivity::class.java)
+                startActivity(intent)
             }
 
             btnComodin.setOnClickListener {
