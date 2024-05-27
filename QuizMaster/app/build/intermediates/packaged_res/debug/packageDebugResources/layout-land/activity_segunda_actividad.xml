@@ -15,7 +15,7 @@
         android:textSize="15dp"
         android:textFontWeight="600"
         android:background="@color/light_gray"
-        android:text=""
+        android:text="@string/vacio"
         android:textColor="@color/white"/>
 
     <GridLayout
@@ -35,7 +35,7 @@
             android:id="@+id/textViewPregunta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="@string/vacio"
             android:layout_columnSpan="2"
             android:textAlignment="center"
             android:textSize="17dp"
@@ -80,14 +80,14 @@
             android:drawableStart="@android:drawable/star_big_on"
             android:gravity="left"
             android:padding="5dp"
-            android:text="0"
+            android:text="@string/_0_0"
             android:textSize="20dp" />
 
         <Button
             android:id="@+id/comodin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Saltear Pregunta"
+            android:text="@string/saltear_pregunta"
             android:paddingRight="10dp"
             android:paddingLeft="10dp"
             android:layout_marginLeft="10dp"
@@ -99,7 +99,7 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:paddingRight="20dp"
-            android:text="10s"
+            android:text="@string/tiempo"
             android:textSize="20dp" />
 
     </LinearLayout>

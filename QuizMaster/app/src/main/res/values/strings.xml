@@ -16,8 +16,9 @@
     <string name="musica">musica</string>
     <string name="idiomas">idiomas</string>
     <string name="medicina">medicina</string>
-    <string name="seleccione_la_categoria_que_guste">SELECCIONE LA CATEGORIA QUE GUSTE</string>
+    <string name="seleccione_la_categoria_que_guste">SELECCIONE UNA CATEGORIA</string>
     <string name="vacio">0</string>
     <string name="saltear_pregunta">Saltear Pregunta</string>
     <string name="tiempo">10s</string>
+    <string name="_0_0" translatable="false">0/0</string>
 </resources>

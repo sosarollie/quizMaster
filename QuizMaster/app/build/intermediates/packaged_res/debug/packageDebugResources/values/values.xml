@@ -12,6 +12,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FFFFFF44</color>
+    <string name="_0_0" translatable="false">0/0</string>
     <string name="app_name">QuizMaster</string>
     <string name="arte_y_cultura">arte y cultura</string>
     <string name="ciencia">ciencia</string>
@@ -28,7 +29,7 @@
     <string name="reglas_completas">Elija una categoria, luego tendra que contestar tres preguntas de esa categoria, tendra cuatro opciones y una sola sera la correcta, cuenta con el uso de un comodin, el cual puede saltear una pregunta en caso de usarlo, al final de juego podra volver a jugar la misma categoria o volver al menu principal</string>
     <string name="reglas_del_juego">Reglas del juego:</string>
     <string name="saltear_pregunta">Saltear Pregunta</string>
-    <string name="seleccione_la_categoria_que_guste">SELECCIONE LA CATEGORIA QUE GUSTE</string>
+    <string name="seleccione_la_categoria_que_guste">SELECCIONE UNA CATEGORIA</string>
     <string name="tecnologia">tecnologia</string>
     <string name="tiempo">10s</string>
     <string name="vacio">0</string>

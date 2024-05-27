@@ -45,6 +45,7 @@ layout activity_segunda_actividad
 menu menu_main
 mipmap ic_launcher
 mipmap ic_launcher_round
+string _0_0
 string app_name
 string arte_y_cultura
 string ciencia

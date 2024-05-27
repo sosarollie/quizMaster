@@ -31,6 +31,7 @@ class SegundaActividad : ComponentActivity() {
     private var preguntasCategoria = mutableListOf<JSONObject>()
     private val mainHandler = Handler(Looper.getMainLooper())
     private var cantPreguntas=0
+    private var cantCorrectas=0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -116,9 +117,7 @@ class SegundaActividad : ComponentActivity() {
             }
             preguntasRestantes--
         } else {
-            val respuestasCorrectas = findViewById<TextView>(R.id.contador)
-            val rc = respuestasCorrectas.text.toString().toInt()
-            finDelJuego(rc,cantPreguntas,seUsoComodin)
+            finDelJuego(cantCorrectas,cantPreguntas,seUsoComodin)
         }
     }
 
@@ -126,15 +125,15 @@ class SegundaActividad : ComponentActivity() {
         botonesOpcion.forEach { it.isEnabled = false }
         val btnComodin = findViewById<Button>(R.id.comodin)
         btnComodin.isEnabled=false
+        val contadorRespuestasCorrectas = findViewById<TextView>(R.id.contador)
         if (opcionSeleccionada != opcionCorrectaIndex) {
             botonesOpcion[opcionSeleccionada].setBackgroundColor(Color.RED)
             botonesOpcion[opcionCorrectaIndex!!].setBackgroundColor(Color.GRAY)
         }else{
             botonesOpcion[opcionCorrectaIndex!!].setBackgroundColor(Color.GREEN)
-            val contadorRespuestasCorrectas = findViewById<TextView>(R.id.contador)
-            val contadorActual = contadorRespuestasCorrectas.text.toString().toInt()
-            contadorRespuestasCorrectas.text = (contadorActual + 1).toString()
+            cantCorrectas++
         }
+        contadorRespuestasCorrectas.text = (cantCorrectas).toString()+"/"+cantPreguntas
         mainHandler.postDelayed({
             mostrarSiguientePregunta(preguntasCategoria)
         }, 2000)
@@ -158,6 +157,8 @@ class SegundaActividad : ComponentActivity() {
             val btnComodin = findViewById<Button>(R.id.comodin)
             btnComodin.visibility= View.INVISIBLE
             botonesOpcion[opcionCorrectaIndex!!].setBackgroundColor(Color.GRAY)
+            val contadorRespuestasCorrectas = findViewById<TextView>(R.id.contador)
+            contadorRespuestasCorrectas.text = (cantCorrectas).toString()+"/"+cantPreguntas
             mainHandler.postDelayed({
                 mostrarSiguientePregunta(preguntasCategoria)
             }, 2000)
