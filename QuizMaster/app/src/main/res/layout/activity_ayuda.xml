@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/purple_500">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="75dp"
         android:layout_gravity="center"
-        android:text="Reglas del juego:"
+        android:text="@string/reglas_del_juego"
         android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="40dp" />
+        android:textColor="@color/orange"
+        android:textSize="40sp" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="560dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Elija una categoria, luego tendra que contestar tres preguntas de esa categoria, tendra cuatro opciones y una sola sera la correcta, cuenta con el uso de un comodin, el cual puede saltear una pregunta en caso de usarlo, al final de juego podra volver a jugar la misma categoria o volver al menu principal"
+        android:text="@string/reglas_completas"
         android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="30dp" />
+        android:textColor="@color/orange"
+        android:textSize="30sp"
+        tools:ignore="VisualLintLongText" />
 
     <Button
         android:layout_width="150dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
-        android:text="VOLVER" />
+        android:background="@color/orange"
+        android:textSize="25sp"
+        android:text="@string/volver"
+        android:textColor="@color/black" />
 </LinearLayout>

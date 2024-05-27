@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QuizMaster</string>
+    <string name="reglas_del_juego">Game rules:</string>
+    <string name="reglas_completas">Choose a category, then you will have to answer three questions from that category, you will have four options and only one will be correct, it has the use of a wild card, which can skip a question if necessary, at the end of the game you will be able to return to play the same category or return to the main menu.</string>
+    <string name="volver">RETURN</string>
+    <string name="ciencia">science</string>
+    <string name="historia">history</string>
+    <string name="geografia">geography</string>
+    <string name="deporte">sport</string>
+    <string name="entretenimiento">entertainment</string>
+    <string name="tecnologia">technology</string>
+    <string name="arte_y_cultura">art and culture</string>
+    <string name="literatura">literature</string>
+    <string name="filosofia">philosophy</string>
+    <string name="gastronomia">gastronomy</string>
+    <string name="musica">music</string>
+    <string name="idiomas">languages</string>
+    <string name="medicina">medicine</string>
+    <string name="seleccione_la_categoria_que_guste">SELECT THE CATEGORY YOU LIKE</string>
+    <string name="vacio">0</string>
+    <string name="saltear_pregunta">Skip Question</string>
+    <string name="tiempo">10s</string>
+</resources>

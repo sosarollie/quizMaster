@@ -1,5 +1,5 @@
-com.example.quizmaster.test.app-core-1.5.0-0 C:\Users\Intel\.gradle\caches\transforms-3\9f6cb65a4653b29d0d30f3ec07cb561c\transformed\core-1.5.0\res
-com.example.quizmaster.test.app-annotation-experimental-1.3.0-1 C:\Users\Intel\.gradle\caches\transforms-3\e05521bfaff8d20919e9ca856f5bdf17\transformed\annotation-experimental-1.3.0\res
+com.example.quizmaster.test.app-core-1.5.0-0 C:\Users\Intel\.gradle\caches\transforms-4\3811174a6bd6ec74626ff3320f5ac805\transformed\core-1.5.0\res
+com.example.quizmaster.test.app-annotation-experimental-1.3.0-1 C:\Users\Intel\.gradle\caches\transforms-4\a00bd9ebd7f3b1ade792f4c2964dbcb4\transformed\annotation-experimental-1.3.0\res
 com.example.quizmaster.test.app-androidTest-2 C:\Users\Intel\Documents\GitHub\quizMaster\QuizMaster\app\build\generated\res\resValues\androidTest\debug
 com.example.quizmaster.test.app-mergeDebugAndroidTestResources-3 C:\Users\Intel\Documents\GitHub\quizMaster\QuizMaster\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
 com.example.quizmaster.test.app-mergeDebugAndroidTestResources-4 C:\Users\Intel\Documents\GitHub\quizMaster\QuizMaster\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir

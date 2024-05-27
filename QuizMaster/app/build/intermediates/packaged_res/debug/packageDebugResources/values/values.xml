@@ -13,6 +13,26 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FFFFFF44</color>
     <string name="app_name">QuizMaster</string>
+    <string name="arte_y_cultura">arte y cultura</string>
+    <string name="ciencia">ciencia</string>
+    <string name="deporte">deporte</string>
+    <string name="entretenimiento">entretenimiento</string>
+    <string name="filosofia">filosofia</string>
+    <string name="gastronomia">gastronomia</string>
+    <string name="geografia">geografia</string>
+    <string name="historia">historia</string>
+    <string name="idiomas">idiomas</string>
+    <string name="literatura">literatura</string>
+    <string name="medicina">medicina</string>
+    <string name="musica">musica</string>
+    <string name="reglas_completas">Elija una categoria, luego tendra que contestar tres preguntas de esa categoria, tendra cuatro opciones y una sola sera la correcta, cuenta con el uso de un comodin, el cual puede saltear una pregunta en caso de usarlo, al final de juego podra volver a jugar la misma categoria o volver al menu principal</string>
+    <string name="reglas_del_juego">Reglas del juego:</string>
+    <string name="saltear_pregunta">Saltear Pregunta</string>
+    <string name="seleccione_la_categoria_que_guste">SELECCIONE LA CATEGORIA QUE GUSTE</string>
+    <string name="tecnologia">tecnologia</string>
+    <string name="tiempo">10s</string>
+    <string name="vacio">0</string>
+    <string name="volver">VOLVER</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
     </style>
     <style name="Botones">

@@ -4,7 +4,7 @@
             "outputFile": "com.example.quizmaster.app-mergeDebugResources-29:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jesus\\.gradle\\caches\\transforms-4\\310261daa775a77fc087cfa3c9070f52\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\Intel\\.gradle\\caches\\transforms-4\\d09905c23ff08bf73dd284e9ba068acf\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jesus\\.gradle\\caches\\transforms-4\\bac316905e1db2fac47d1a3046ebff9d\\transformed\\material-1.11.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\Intel\\.gradle\\caches\\transforms-4\\3abb61cd32f615c1973fc4585e181cc5\\transformed\\material-1.11.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
