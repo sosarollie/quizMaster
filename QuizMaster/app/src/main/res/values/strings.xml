@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">QuizMaster</string>
-    <string name="reglas_del_juego">Reglas del juego:</string>
+    <string name="reglas_del_juego">Reglas del juego</string>
     <string name="reglas_completas">Elija una categoria, luego tendra que contestar tres preguntas de esa categoria, tendra cuatro opciones y una sola sera la correcta, cuenta con el uso de un comodin, el cual puede saltear una pregunta en caso de usarlo, al final de juego podra volver a jugar la misma categoria o volver al menu principal</string>
     <string name="volver">VOLVER</string>
     <string name="ciencia">ciencia</string>

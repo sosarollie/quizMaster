@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/textViewCategoria"
-        android:padding="15dp"
+        android:paddingTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
@@ -17,52 +17,6 @@
         android:background="@color/light_gray"
         android:text="@string/vacio"
         android:textColor="@color/white"/>
-
-    <GridLayout
-        android:id="@+id/main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="2"
-        android:background="@color/purple_200"
-        android:paddingLeft="40dp"
-        android:paddingRight="20dp"
-        android:layout_weight="3"
-        android:gravity="center"
-        android:orientation="horizontal"
-        tools:context=".SegundaActividad">
-
-        <TextView
-            android:id="@+id/textViewPregunta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/vacio"
-            android:layout_columnSpan="2"
-            android:textAlignment="center"
-            android:textSize="17dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/white"/>
-
-        <Button
-            android:id="@+id/opcion0"
-            style="@style/Botones"
-            android:layout_height="wrap_content"></Button>
-
-        <Button
-            android:id="@+id/opcion1"
-            style="@style/Botones"
-            android:layout_height="wrap_content"></Button>
-
-        <Button
-            android:id="@+id/opcion2"
-            style="@style/Botones"
-            android:layout_height="wrap_content"></Button>
-
-        <Button
-            android:id="@+id/opcion3"
-            style="@style/Botones"
-            android:layout_height="wrap_content"></Button>
-
-    </GridLayout>
 
     <LinearLayout
         android:id="@+id/toolbar_bottom"
@@ -103,5 +57,51 @@
             android:textSize="20dp" />
 
     </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:background="@color/ColorFondo"
+        android:paddingLeft="40dp"
+        android:paddingRight="20dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:context=".SegundaActividad">
+
+        <TextView
+            android:id="@+id/textViewPregunta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vacio"
+            android:layout_columnSpan="2"
+            android:textAlignment="center"
+            android:textSize="17dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/opcion0"
+            style="@style/Botones"
+            android:layout_height="wrap_content"></Button>
+
+        <Button
+            android:id="@+id/opcion1"
+            style="@style/Botones"
+            android:layout_height="wrap_content"></Button>
+
+        <Button
+            android:id="@+id/opcion2"
+            style="@style/Botones"
+            android:layout_height="wrap_content"></Button>
+
+        <Button
+            android:id="@+id/opcion3"
+            style="@style/Botones"
+            android:layout_height="wrap_content"></Button>
+
+    </GridLayout>
 
 </LinearLayout>

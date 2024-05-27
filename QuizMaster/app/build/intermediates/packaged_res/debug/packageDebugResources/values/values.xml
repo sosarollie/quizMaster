@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="ColorFondo">#FF0000FF</color>
+    <color name="ColorFondo">#FF9800</color>
     <color name="black">#FF000000</color>
-    <color name="botones">#FFFF0000</color>
+    <color name="botones">#7C4DFF</color>
     <color name="light_gray">#FFAAAAAA</color>
     <color name="orange">#FFF97300</color>
     <color name="purple_200">#FFBB86FC</color>
@@ -27,7 +27,7 @@
     <string name="medicina">medicina</string>
     <string name="musica">musica</string>
     <string name="reglas_completas">Elija una categoria, luego tendra que contestar tres preguntas de esa categoria, tendra cuatro opciones y una sola sera la correcta, cuenta con el uso de un comodin, el cual puede saltear una pregunta en caso de usarlo, al final de juego podra volver a jugar la misma categoria o volver al menu principal</string>
-    <string name="reglas_del_juego">Reglas del juego:</string>
+    <string name="reglas_del_juego">Reglas del juego</string>
     <string name="saltear_pregunta">Saltear Pregunta</string>
     <string name="seleccione_la_categoria_que_guste">SELECCIONE UNA CATEGORIA</string>
     <string name="tecnologia">tecnologia</string>
@@ -42,7 +42,7 @@
         <item name="android:textSize">18sp</item>
         <item name="android:layout_marginTop">5dp</item>
         <item name="android:layout_marginBottom">20dp</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:background">@drawable/boton_redondo</item>
         <item name="android:layout_gravity">center_horizontal</item>
     </style>
