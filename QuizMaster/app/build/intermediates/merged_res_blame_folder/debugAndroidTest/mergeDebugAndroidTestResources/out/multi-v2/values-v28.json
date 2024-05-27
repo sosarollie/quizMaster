@@ -4,7 +4,7 @@
             "outputFile": "com.example.quizmaster.test.app-mergeDebugAndroidTestResources-3:/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Intel\\.gradle\\caches\\transforms-4\\3811174a6bd6ec74626ff3320f5ac805\\transformed\\core-1.5.0\\res\\values-v28\\values.xml",
+                    "source": "C:\\Users\\Intel\\.gradle\\caches\\transforms-4\\f385ba5b3411e05a8dde9eddb505a32b\\transformed\\core-1.5.0\\res\\values-v28\\values.xml",
                     "from": {
                         "startLines": "4,13",
                         "startColumns": "0,0",

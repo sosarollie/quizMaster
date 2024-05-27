@@ -33,5 +33,6 @@
         android:background="@color/orange"
         android:textSize="25sp"
         android:text="@string/volver"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:id="@+id/volver"/>
 </LinearLayout>

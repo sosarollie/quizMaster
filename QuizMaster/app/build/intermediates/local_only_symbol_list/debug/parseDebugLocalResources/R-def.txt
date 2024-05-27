@@ -39,6 +39,7 @@ id tecnologia
 id textViewCategoria
 id textViewPregunta
 id toolbar_bottom
+id volver
 layout activity_ayuda
 layout activity_main
 layout activity_segunda_actividad
