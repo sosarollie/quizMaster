@@ -151,10 +151,13 @@ class SegundaActividad : ComponentActivity() {
         return json
     }
     private fun usarComodin() {
+        botonesOpcion.forEach { it.isEnabled = false }
+        val btnComodin = findViewById<Button>(R.id.comodin)
+        btnComodin.isEnabled=false
         if (!seUsoComodin) {
             seUsoComodin = true
             preguntasRestantes++
-            val btnComodin = findViewById<Button>(R.id.comodin)
+            cantPreguntas--
             btnComodin.visibility= View.INVISIBLE
             botonesOpcion[opcionCorrectaIndex!!].setBackgroundColor(Color.GRAY)
             val contadorRespuestasCorrectas = findViewById<TextView>(R.id.contador)
