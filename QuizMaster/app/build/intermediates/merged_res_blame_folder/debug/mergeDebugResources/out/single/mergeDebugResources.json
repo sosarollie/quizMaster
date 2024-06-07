@@ -28,10 +28,6 @@
         "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.quizmaster.app-debug-31:/layout_activity_ayuda.xml.flat",
-        "source": "com.example.quizmaster.app-main-33:/layout/activity_ayuda.xml"
-    },
-    {
         "merged": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
@@ -54,6 +50,10 @@
     {
         "merged": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\menu_menu_main.xml.flat",
         "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "com.example.quizmaster.app-debug-31:/layout-land_activity_segunda_actividad.xml.flat",
+        "source": "com.example.quizmaster.app-main-33:/layout-land/activity_segunda_actividad.xml"
     },
     {
         "merged": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\drawable_boton_redondo.xml.flat",
