@@ -28,6 +28,16 @@
         android:testOnly="true"
         android:theme="@style/Theme.MyApplication" >
         <activity
+            android:name="com.example.quizmaster.LoginActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.example.quizmaster.AyudaActivity"
             android:exported="false"
             android:theme="@style/AppTheme" />
@@ -36,14 +46,9 @@
             android:exported="false" />
         <activity
             android:name="com.example.quizmaster.MainActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="QuizMaster"
             android:theme="@style/AppTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <provider

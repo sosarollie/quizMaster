@@ -12,10 +12,12 @@ color teal_200
 color teal_700
 color white
 color yellow
+drawable bordercolor
 drawable boton_redondo
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id arte_y_cultura
+id btnJugar
 id ciencia
 id comodin
 id contador
@@ -42,6 +44,7 @@ id timer
 id toolbar_bottom
 id volver
 layout activity_ayuda
+layout activity_login
 layout activity_main
 layout activity_segunda_actividad
 menu menu_main
