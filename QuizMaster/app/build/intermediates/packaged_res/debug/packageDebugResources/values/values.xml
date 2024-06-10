@@ -31,7 +31,7 @@
     <string name="saltear_pregunta">Saltear Pregunta</string>
     <string name="seleccione_la_categoria_que_guste">SELECCIONE UNA CATEGORIA</string>
     <string name="tecnologia">tecnologia</string>
-    <string name="tiempo">10s</string>
+    <string name="tiempo">30s</string>
     <string name="vacio">0</string>
     <string name="volver">VOLVER</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">

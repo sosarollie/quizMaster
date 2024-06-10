@@ -11,6 +11,7 @@ import org.json.JSONObject
 import java.io.IOException
 import android.util.Log
 import android.graphics.Color
+import android.os.CountDownTimer
 import android.widget.Button
 import android.widget.ImageButton
 import android.os.Handler
@@ -32,6 +33,7 @@ class SegundaActividad : ComponentActivity() {
     private val mainHandler = Handler(Looper.getMainLooper())
     private var cantPreguntas=0
     private var cantCorrectas=0
+    private var timer:CountDownTimer?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -112,6 +114,8 @@ class SegundaActividad : ComponentActivity() {
                 usarComodin()
             }
 
+            iniciarTimer()
+
             if (preguntaSeleccionada != null) {
                 preguntasSeleccionadas.add(preguntaSeleccionada)
             }
@@ -122,9 +126,7 @@ class SegundaActividad : ComponentActivity() {
     }
 
     private fun comprobarRespuesta(opcionSeleccionada: Int) {
-        botonesOpcion.forEach { it.isEnabled = false }
-        val btnComodin = findViewById<Button>(R.id.comodin)
-        btnComodin.isEnabled=false
+        desactivarBotonesYTimer()
         val contadorRespuestasCorrectas = findViewById<TextView>(R.id.contador)
         if (opcionSeleccionada != opcionCorrectaIndex) {
             botonesOpcion[opcionSeleccionada].setBackgroundColor(Color.RED)
@@ -150,10 +152,33 @@ class SegundaActividad : ComponentActivity() {
         }
         return json
     }
+
+    private fun iniciarTimer(){
+        val timerId=findViewById<TextView>(R.id.timer)
+        timer?.cancel()
+        timer=object : CountDownTimer(30000,1000){
+            override fun onTick(millisUntilFinished: Long) {
+                timerId.text="${millisUntilFinished/1000}s"
+            }
+
+            override fun onFinish() {
+                seAcaboElTiempo()
+            }
+        }.start()
+
+    }
+    private fun seAcaboElTiempo(){
+        desactivarBotonesYTimer()
+        botonesOpcion[opcionCorrectaIndex!!].setBackgroundColor(Color.GRAY)
+        val contadorRespuestasCorrectas = findViewById<TextView>(R.id.contador)
+        contadorRespuestasCorrectas.text = (cantCorrectas).toString()+"/"+cantPreguntas
+        mainHandler.postDelayed({
+            mostrarSiguientePregunta(preguntasCategoria)
+        }, 2000)
+    }
     private fun usarComodin() {
-        botonesOpcion.forEach { it.isEnabled = false }
+        desactivarBotonesYTimer()
         val btnComodin = findViewById<Button>(R.id.comodin)
-        btnComodin.isEnabled=false
         if (!seUsoComodin) {
             seUsoComodin = true
             preguntasRestantes++
@@ -203,7 +228,22 @@ class SegundaActividad : ComponentActivity() {
             preguntasSeleccionadas.clear()
         }
 
-        builder.setCancelable(false)
+        builder.setNeutralButton("Compartir") { dialog, which ->
+            val puntaje = "Mi puntaje es $contador/$cantPreg y ${if (seUsoComo) "usé" else "no usé"} el comodín."
+            val intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, puntaje)
+                type = "text/plain"
+            }
+            startActivity(Intent.createChooser(intent,"Compartir tu puntaje a traves de"))
+        }
+            builder.setCancelable(false)
         builder.show()
+    }
+    private fun desactivarBotonesYTimer(){
+        botonesOpcion.forEach { it.isEnabled = false }
+        val btnComodin = findViewById<Button>(R.id.comodin)
+        btnComodin.isEnabled=false
+        timer?.cancel()
     }
 }

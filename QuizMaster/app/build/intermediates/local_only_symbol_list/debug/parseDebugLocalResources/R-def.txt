@@ -38,6 +38,7 @@ id opcion3
 id tecnologia
 id textViewCategoria
 id textViewPregunta
+id timer
 id toolbar_bottom
 id volver
 layout activity_ayuda
