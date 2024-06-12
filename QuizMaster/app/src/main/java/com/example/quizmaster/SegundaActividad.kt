@@ -41,9 +41,12 @@ class SegundaActividad : ComponentActivity() {
 
         val categoriaSeleccionada = intent.getStringExtra("categoria")
         val textViewCategoria = findViewById<TextView>(R.id.textViewCategoria)
+        val textViewNombre = findViewById<TextView>(R.id.textViewNombre)
         textViewCategoria.text = categoriaSeleccionada
+        val extras = intent.extras
 
         botonesOpcion = listOf(findViewById(R.id.opcion0), findViewById(R.id.opcion1), findViewById(R.id.opcion2), findViewById(R.id.opcion3))
+        textViewNombre.text = extras?.getString("jugador")
 
         val jsonStr: String? = loadJSONFromAsset("preguntas.json")
 

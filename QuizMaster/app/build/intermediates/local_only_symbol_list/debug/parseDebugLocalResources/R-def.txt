@@ -22,6 +22,7 @@ id ciencia
 id comodin
 id contador
 id deporte
+id editNombre
 id entretenimiento
 id filosofia
 id gastronomia
@@ -39,6 +40,7 @@ id opcion2
 id opcion3
 id tecnologia
 id textViewCategoria
+id textViewNombre
 id textViewPregunta
 id timer
 id toolbar_bottom

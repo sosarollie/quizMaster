@@ -3267,6 +3267,7 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editNombre
 id edit_query
 id edit_text_id
 id elastic
@@ -3561,6 +3562,7 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textViewCategoria
+id textViewNombre
 id textViewPregunta
 id text_input_end_icon
 id text_input_error_icon

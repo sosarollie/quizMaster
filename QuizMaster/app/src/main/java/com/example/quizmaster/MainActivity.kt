@@ -42,10 +42,13 @@ class MainActivity : AppCompatActivity() {
         R.id.medicina to "Medicina"
     )
     private val listener = View.OnClickListener { view ->
+        val extras = intent.extras
+        val jugador = extras?.getString("jugador");
         val categoria = categoriasMap[view.id]
         if (categoria != null) {
             val intent = Intent(this, SegundaActividad::class.java)
             intent.putExtra("categoria", categoria)
+            intent.putExtra("jugador", jugador)
             startActivity(intent)
         }
     }
