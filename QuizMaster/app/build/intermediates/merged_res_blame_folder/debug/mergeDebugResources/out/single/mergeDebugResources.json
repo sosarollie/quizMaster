@@ -16,10 +16,6 @@
         "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.example.quizmaster.app-debug-31:/layout_activity_login.xml.flat",
-        "source": "com.example.quizmaster.app-main-33:/layout/activity_login.xml"
-    },
-    {
         "merged": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\layout_activity_login.xml.flat",
         "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\layout\\activity_login.xml"
     },
@@ -60,6 +56,10 @@
         "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\menu\\menu_main.xml"
     },
     {
+        "merged": "com.example.quizmaster.app-debug-31:/layout-land_activity_segunda_actividad.xml.flat",
+        "source": "com.example.quizmaster.app-main-33:/layout-land/activity_segunda_actividad.xml"
+    },
+    {
         "merged": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\drawable_boton_redondo.xml.flat",
         "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\drawable\\boton_redondo.xml"
     },
@@ -74,6 +74,10 @@
     {
         "merged": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\layout_activity_segunda_actividad.xml.flat",
         "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\layout\\activity_segunda_actividad.xml"
+    },
+    {
+        "merged": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\layout-land_activity_login.xml.flat",
+        "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\layout-land\\activity_login.xml"
     },
     {
         "merged": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
