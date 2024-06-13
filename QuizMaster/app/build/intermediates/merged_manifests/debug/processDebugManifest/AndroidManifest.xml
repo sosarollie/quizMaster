@@ -28,6 +28,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.MyApplication" >
         <activity
+            android:name="com.example.quizmaster.RankingActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.quizmaster.LoginActivity"
             android:exported="true"
             android:theme="@style/AppTheme" >
@@ -48,8 +51,7 @@
             android:name="com.example.quizmaster.MainActivity"
             android:exported="false"
             android:label="QuizMaster"
-            android:theme="@style/AppTheme" >
-        </activity>
+            android:theme="@style/AppTheme" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

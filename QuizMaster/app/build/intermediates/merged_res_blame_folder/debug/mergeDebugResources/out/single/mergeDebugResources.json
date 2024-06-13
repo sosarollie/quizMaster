@@ -44,6 +44,10 @@
         "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\layout_activity_ranking.xml.flat",
+        "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\layout\\activity_ranking.xml"
+    },
+    {
         "merged": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
@@ -56,8 +60,8 @@
         "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\menu\\menu_main.xml"
     },
     {
-        "merged": "com.example.quizmaster.app-debug-31:/layout-land_activity_segunda_actividad.xml.flat",
-        "source": "com.example.quizmaster.app-main-33:/layout-land/activity_segunda_actividad.xml"
+        "merged": "com.example.quizmaster.app-debug-31:/layout_activity_ranking.xml.flat",
+        "source": "com.example.quizmaster.app-main-33:/layout/activity_ranking.xml"
     },
     {
         "merged": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\drawable_boton_redondo.xml.flat",
@@ -78,6 +82,10 @@
     {
         "merged": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\layout-land_activity_login.xml.flat",
         "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\layout-land\\activity_login.xml"
+    },
+    {
+        "merged": "com.example.quizmaster.app-debug-31:/layout-land_activity_main.xml.flat",
+        "source": "com.example.quizmaster.app-main-33:/layout-land/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -102,5 +110,9 @@
     {
         "merged": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\layout-land_activity_segunda_actividad.xml.flat",
         "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\layout-land\\activity_segunda_actividad.xml"
+    },
+    {
+        "merged": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\layout-land_activity_main.xml.flat",
+        "source": "C:\\Users\\jesus\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\layout-land\\activity_main.xml"
     }
 ]

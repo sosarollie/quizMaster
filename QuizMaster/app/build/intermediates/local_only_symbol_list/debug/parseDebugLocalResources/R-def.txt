@@ -30,6 +30,12 @@ id geografia
 id helpButton
 id historia
 id idiomas
+id jugador1
+id jugador2
+id jugador3
+id jugador4
+id jugador5
+id jugador6
 id literatura
 id main
 id medicina
@@ -38,6 +44,12 @@ id opcion0
 id opcion1
 id opcion2
 id opcion3
+id puntaje1
+id puntaje2
+id puntaje3
+id puntaje4
+id puntaje5
+id puntaje6
 id tecnologia
 id textViewCategoria
 id textViewNombre
@@ -48,6 +60,7 @@ id volver
 layout activity_ayuda
 layout activity_login
 layout activity_main
+layout activity_ranking
 layout activity_segunda_actividad
 menu menu_main
 mipmap ic_launcher

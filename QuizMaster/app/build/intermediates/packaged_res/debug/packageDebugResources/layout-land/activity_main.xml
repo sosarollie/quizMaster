@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/ColorFondo">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seleccione_la_categoria_que_guste"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal|center_vertical" />
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                        <Button
+                            style="@style/Botones"
+                            android:id="@+id/ciencia"
+                            android:text="@string/ciencia"
+                            />
+                        <Button
+                            style="@style/Botones"
+                            android:id="@+id/historia"
+                            android:text="@string/historia" />
+                        <Button
+                            style="@style/Botones"
+                            android:id="@+id/geografia"
+                            android:text="@string/geografia" />
+                        <Button
+                            style="@style/Botones"
+                            android:id="@+id/deporte"
+                            android:text="@string/deporte" />
+                        <Button
+                            style="@style/Botones"
+                            android:id="@+id/entretenimiento"
+                            android:text="@string/entretenimiento" />
+                        <Button
+                            style="@style/Botones"
+                            android:id="@+id/tecnologia"
+                            android:text="@string/tecnologia" />
+                        <Button
+                            style="@style/Botones"
+                            android:id="@+id/arte_y_cultura"
+                            android:text="@string/arte_y_cultura" />
+                        <Button
+                            style="@style/Botones"
+                            android:id="@+id/literatura"
+                            android:text="@string/literatura" />
+                        <Button
+                            style="@style/Botones"
+                            android:id="@+id/filosofia"
+                            android:text="@string/filosofia" />
+                        <Button
+                            style="@style/Botones"
+                            android:id="@+id/gastronomia"
+                            android:text="@string/gastronomia" />
+                        <Button
+                            style="@style/Botones"
+                            android:id="@+id/musica"
+                            android:text="@string/musica" />
+                        <Button
+                            style="@style/Botones"
+                            android:id="@+id/idiomas"
+                            android:text="@string/idiomas" />
+                        <Button
+                            style="@style/Botones"
+                            android:id="@+id/medicina"
+                            android:text="@string/medicina" />
+                </LinearLayout>
+        </HorizontalScrollView>
+</LinearLayout>
