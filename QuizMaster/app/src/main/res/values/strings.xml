@@ -21,5 +21,8 @@
     <string name="saltear_pregunta">Saltear Pregunta</string>
     <string name="tiempo">30s</string>
     <string name="_0_0" translatable="false">0/0</string>
-    <string name="ranking">Ranking</string>
+    <string name="ranking" translatable="false">Ranking</string>
+    <string name="ingres_tu_nombre">Ingresá tu nombre</string>
+    <string name="para_guardar_tu_puntaje_en_el_ranking">Para guardar tu puntaje en el ranking</string>
+    <string name="jugar">Jugar</string>
 </resources>

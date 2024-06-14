@@ -35,7 +35,6 @@ id jugador2
 id jugador3
 id jugador4
 id jugador5
-id jugador6
 id literatura
 id main
 id medicina
@@ -49,7 +48,7 @@ id puntaje2
 id puntaje3
 id puntaje4
 id puntaje5
-id puntaje6
+id puntuacionButton
 id tecnologia
 id textViewCategoria
 id textViewNombre

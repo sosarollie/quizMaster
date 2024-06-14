@@ -11,14 +11,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ingresá tu nombre"
+        android:text="@string/ingres_tu_nombre"
         android:textSize="40dp">
     </TextView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Para guardar tu puntaje en el ranking"
+        android:text="@string/para_guardar_tu_puntaje_en_el_ranking"
         android:textSize="20dp">
     </TextView>
 
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:autofillHints="name"
         android:id="@+id/editNombre"
-        android:text=""
+        android:text="@string/vacio"
         android:hint="Nombre"
         android:textSize="30dp"
         android:layout_marginTop="50dp"
@@ -42,7 +42,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jugar"
+        android:text="@string/jugar"
         style="@style/Botones"
         android:layout_marginTop="50dp"
         android:id="@+id/btnJugar">

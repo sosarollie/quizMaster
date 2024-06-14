@@ -3337,7 +3337,6 @@ id jugador2
 id jugador3
 id jugador4
 id jugador5
-id jugador6
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3478,7 +3477,7 @@ id puntaje2
 id puntaje3
 id puntaje4
 id puntaje5
-id puntaje6
+id puntuacionButton
 id radio
 id ratio
 id rectangles

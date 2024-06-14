@@ -65,6 +65,13 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AyudaActivity::class.java)
             startActivity(intent)
         }
+        if(id==R.id.puntuacionButton){
+            val extras = intent.extras
+            val intent=Intent(this,RankingActivity::class.java)
+            val jugador = extras?.getString("jugador");
+            intent.putExtra("jugador",jugador)
+            startActivity(intent)
+        }
         return true
     }
 }

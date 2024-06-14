@@ -23,11 +23,12 @@ class RankingActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         val sharedPreferences = getSharedPreferences("ranking", Context.MODE_PRIVATE)
 
-        for (i in 1..5) {
-            val idJugador = resources.getIdentifier("jugador$i", "id", packageName)
-            val idPuntaje = resources.getIdentifier("puntaje$i", "id", packageName)
+        for (i in 0..4) {  // Cambiar el rango del índice a 0..4
+            val idJugador = resources.getIdentifier("jugador${i + 1}", "id", packageName)
+            val idPuntaje = resources.getIdentifier("puntaje${i + 1}", "id", packageName)
             val auxJugador = findViewById<TextView>(idJugador)
             val auxPuntaje = findViewById<TextView>(idPuntaje)
 
@@ -39,6 +40,7 @@ class RankingActivity : AppCompatActivity() {
                 auxPuntaje.text = puntaje.toString()
             }
         }
+
         val nombre = intent.getStringExtra("jugador")
 
         val volver = findViewById<Button>(R.id.volverAlMenu)

@@ -274,7 +274,7 @@ class SegundaActividad : ComponentActivity() {
         val ranking = mutableListOf<Pair<String, Int>>()
 
         // Cargar los valores existentes en el ranking
-        for (i in 0..4) {
+        for (i in 0..4) {  // Cambiar el rango del índice a 0..4
             val nombre = sharedPreferences.getString("jugador_$i", null)
             val puntos = sharedPreferences.getInt("puntaje_$i", -1)
             if (nombre != null && puntos != -1) {
@@ -294,7 +294,7 @@ class SegundaActividad : ComponentActivity() {
         ranking.sortByDescending { it.second }
 
         // Guardar los nuevos valores en SharedPreferences
-        for (i in 0..4) {
+        for (i in 0..4) {  // Cambiar el rango del índice a 0..4
             if (i < ranking.size) {
                 editor.putString("jugador_$i", ranking[i].first)
                 editor.putInt("puntaje_$i", ranking[i].second)

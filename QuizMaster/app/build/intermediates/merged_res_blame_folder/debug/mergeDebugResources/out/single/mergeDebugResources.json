@@ -44,12 +44,12 @@
         "source": "com.example.quizmaster.app-main-33:/layout/activity_ranking.xml"
     },
     {
-        "merged": "C:\\Users\\Intel\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\Intel\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\xml\\data_extraction_rules.xml"
-    },
-    {
         "merged": "C:\\Users\\Intel\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\layout_activity_ranking.xml.flat",
         "source": "C:\\Users\\Intel\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\layout\\activity_ranking.xml"
+    },
+    {
+        "merged": "C:\\Users\\Intel\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Intel\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\xml\\data_extraction_rules.xml"
     },
     {
         "merged": "C:\\Users\\Intel\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\layout-land_activity_login.xml.flat",
@@ -86,6 +86,10 @@
     {
         "merged": "C:\\Users\\Intel\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Intel\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-main-33:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.quizmaster.app-debug-31:/menu_menu_main.xml.flat",
+        "source": "com.example.quizmaster.app-main-33:/menu/menu_main.xml"
     },
     {
         "merged": "C:\\Users\\Intel\\.gradle\\daemon\\8.6\\com.example.quizmaster.app-debug-31:\\layout_activity_ayuda.xml.flat",

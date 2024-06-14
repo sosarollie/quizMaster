@@ -21,4 +21,7 @@
     <string name="vacio">0</string>
     <string name="saltear_pregunta">Skip Question</string>
     <string name="tiempo">10s</string>
+    <string name="ingres_tu_nombre">Enter your name</string>
+    <string name="para_guardar_tu_puntaje_en_el_ranking">To save your score in the ranking</string>
+    <string name="jugar">Play</string>
 </resources>
