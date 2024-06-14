@@ -57,6 +57,7 @@ id textViewPregunta
 id timer
 id toolbar_bottom
 id volver
+id volverAlMenu
 layout activity_ayuda
 layout activity_login
 layout activity_main
@@ -79,6 +80,7 @@ string idiomas
 string literatura
 string medicina
 string musica
+string ranking
 string reglas_completas
 string reglas_del_juego
 string saltear_pregunta

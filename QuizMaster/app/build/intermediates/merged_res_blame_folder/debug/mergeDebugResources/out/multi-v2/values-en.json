@@ -4,7 +4,7 @@
             "outputFile": "com.example.quizmaster.app-mergeDebugResources-29:/values-en/values-en.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jesus\\quizMaster\\QuizMaster\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "source": "C:\\Users\\Intel\\Documents\\GitHub\\quizMaster\\QuizMaster\\app\\src\\main\\res\\values-en\\strings.xml",
                     "from": {
                         "startLines": "2,12,6,9,10,14,15,8,7,17,13,18,16,4,3,21,19,11,22,20,5",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
