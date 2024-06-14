@@ -2,6 +2,7 @@ package com.example.quizmaster
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
@@ -34,12 +35,17 @@ class SegundaActividad : ComponentActivity() {
     private var cantPreguntas=0
     private var cantCorrectas=0
     private var timer:CountDownTimer?=null
+    private var puntajeTotal=0
+    private var puntajeTimer=0
+    private var esTopCinco=false
+    private var nombre=""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_segunda_actividad)
 
         val categoriaSeleccionada = intent.getStringExtra("categoria")
+        nombre = intent.getStringExtra("jugador").toString()
         val textViewCategoria = findViewById<TextView>(R.id.textViewCategoria)
         val textViewNombre = findViewById<TextView>(R.id.textViewNombre)
         textViewCategoria.text = categoriaSeleccionada
@@ -137,6 +143,7 @@ class SegundaActividad : ComponentActivity() {
         }else{
             botonesOpcion[opcionCorrectaIndex!!].setBackgroundColor(Color.GREEN)
             cantCorrectas++
+            puntajeTotal=puntajeTotal+puntajeTimer
         }
         contadorRespuestasCorrectas.text = (cantCorrectas).toString()+"/"+cantPreguntas
         mainHandler.postDelayed({
@@ -162,6 +169,7 @@ class SegundaActividad : ComponentActivity() {
         timer=object : CountDownTimer(30000,1000){
             override fun onTick(millisUntilFinished: Long) {
                 timerId.text="${millisUntilFinished/1000}s"
+                puntajeTimer=(millisUntilFinished / 1000).toInt()
             }
 
             override fun onFinish() {
@@ -218,27 +226,38 @@ class SegundaActividad : ComponentActivity() {
         builder.setMessage("Respuestas: $contador/$cantPreg\nEl comodín $comodin")
 
         builder.setPositiveButton("Aceptar") { dialog, which ->
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, RankingActivity::class.java)
+            intent.putExtra("jugador",nombre)
             startActivity(intent)
             finish()
         }
 
         builder.setNegativeButton("Reiniciar") { dialog, which ->
+            val btnComodin = findViewById<Button>(R.id.comodin)
+            btnComodin.visibility= View.VISIBLE
             preguntasRestantes = 3
             seUsoComodin = false
             cantPreguntas = 0
             mostrarSiguientePregunta(preguntasCategoria)
             preguntasSeleccionadas.clear()
-        }
 
-        builder.setNeutralButton("Compartir") { dialog, which ->
-            val puntaje = "Mi puntaje es $contador/$cantPreg y ${if (seUsoComo) "usé" else "no usé"} el comodín."
-            val intent = Intent().apply {
-                action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_TEXT, puntaje)
-                type = "text/plain"
+        }
+        if(!seUsoComodin){
+            puntajeTotal=10+puntajeTotal
+        }
+        guardarEnRanking(nombre,puntajeTotal)
+
+        if (esTopCinco) {
+            builder.setNeutralButton("Compartir") { dialog, which ->
+                val puntaje =
+                    "Hey, mi puntuacion de QuizMaster esta entre las 5 mejores, obtuve "+puntajeTotal+" puntos"
+                val intent = Intent().apply {
+                    action = Intent.ACTION_SEND
+                    putExtra(Intent.EXTRA_TEXT, puntaje)
+                    type = "text/plain"
+                }
+                startActivity(Intent.createChooser(intent, "Compartir tu puntaje a traves de"))
             }
-            startActivity(Intent.createChooser(intent,"Compartir tu puntaje a traves de"))
         }
             builder.setCancelable(false)
         builder.show()
@@ -248,5 +267,42 @@ class SegundaActividad : ComponentActivity() {
         val btnComodin = findViewById<Button>(R.id.comodin)
         btnComodin.isEnabled=false
         timer?.cancel()
+    }
+    fun guardarEnRanking(nombreJugador: String, puntaje: Int) {
+        val sharedPreferences = getSharedPreferences("ranking", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        val ranking = mutableListOf<Pair<String, Int>>()
+
+        // Cargar los valores existentes en el ranking
+        for (i in 0..4) {
+            val nombre = sharedPreferences.getString("jugador_$i", null)
+            val puntos = sharedPreferences.getInt("puntaje_$i", -1)
+            if (nombre != null && puntos != -1) {
+                ranking.add(Pair(nombre, puntos))
+            }
+        }
+
+        // Verificar si el nuevo puntaje entra en el top 5
+        esTopCinco = if (ranking.size < 5) {
+            true
+        } else {
+            puntaje > ranking.minByOrNull { it.second }?.second ?: -1
+        }
+
+        // Agregar el nuevo puntaje y reordenar el ranking
+        ranking.add(Pair(nombreJugador, puntaje))
+        ranking.sortByDescending { it.second }
+
+        // Guardar los nuevos valores en SharedPreferences
+        for (i in 0..4) {
+            if (i < ranking.size) {
+                editor.putString("jugador_$i", ranking[i].first)
+                editor.putInt("puntaje_$i", ranking[i].second)
+            } else {
+                editor.remove("jugador_$i")
+                editor.remove("puntaje_$i")
+            }
+        }
+        editor.apply()
     }
 }
