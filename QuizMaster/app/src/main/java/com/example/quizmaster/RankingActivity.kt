@@ -26,7 +26,7 @@ class RankingActivity : AppCompatActivity() {
 
         val sharedPreferences = getSharedPreferences("ranking", Context.MODE_PRIVATE)
 
-        for (i in 0..4) {  // Cambiar el rango del índice a 0..4
+        for (i in 0..4) {
             val idJugador = resources.getIdentifier("jugador${i + 1}", "id", packageName)
             val idPuntaje = resources.getIdentifier("puntaje${i + 1}", "id", packageName)
             val auxJugador = findViewById<TextView>(idJugador)
@@ -47,6 +47,7 @@ class RankingActivity : AppCompatActivity() {
         volver.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("jugador", nombre)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             finish()
         }

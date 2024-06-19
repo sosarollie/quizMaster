@@ -259,9 +259,6 @@ class SegundaActividad : ComponentActivity() {
             preguntasSeleccionadas.clear()
 
         }
-        if(!seUsoComodin){
-            puntajeTotal=10+puntajeTotal
-        }
         guardarEnRanking(nombre,puntajeTotal)
 
         if (esTopCinco) {
