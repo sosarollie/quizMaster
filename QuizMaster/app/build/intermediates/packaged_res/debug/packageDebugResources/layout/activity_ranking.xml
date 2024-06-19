@@ -4,95 +4,109 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RankingActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/ColorFondo">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ranking"
-        android:textSize="40dp"
-        android:layout_gravity="center">
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
     </TextView>
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:columnCount="2"
-        android:useDefaultMargins="true">
+        android:rowCount="5"
+        android:useDefaultMargins="true"
+        android:layout_marginTop="20dp">
 
         <TextView
-            android:text="@string/vacio"
             android:id="@+id/jugador1"
+            android:text="@string/vacio"
+            android:textColor="@color/black"
+            android:textSize="30sp"
             android:layout_marginEnd="30dp"
-            android:textSize="30dp">
+            android:layout_gravity="center">
         </TextView>
         <TextView
-            android:text="@string/vacio"
             android:id="@+id/puntaje1"
-            android:textSize="30dp">
+            android:textColor="@color/black"
+            android:text="@string/vacio"
+            android:textSize="30sp"
+            android:layout_gravity="center">
         </TextView>
         <TextView
-            android:text="@string/vacio"
             android:id="@+id/jugador2"
+            android:text="@string/vacio"
+            android:textColor="@color/black"
+            android:textSize="30sp"
             android:layout_marginEnd="30dp"
-            android:textSize="30dp">
+            android:layout_gravity="center">
         </TextView>
         <TextView
-            android:text="@string/vacio"
             android:id="@+id/puntaje2"
-            android:textSize="30dp">
+            android:text="@string/vacio"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_gravity="center">
         </TextView>
         <TextView
-            android:text="@string/vacio"
             android:id="@+id/jugador3"
+            android:text="@string/vacio"
+            android:textColor="@color/black"
+            android:textSize="30sp"
             android:layout_marginEnd="30dp"
-            android:textSize="30dp">
+            android:layout_gravity="center">
         </TextView>
         <TextView
-            android:text="@string/vacio"
             android:id="@+id/puntaje3"
-            android:textSize="30dp">
+            android:text="@string/vacio"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_gravity="center">
         </TextView>
         <TextView
-            android:text="@string/vacio"
             android:id="@+id/jugador4"
+            android:text="@string/vacio"
+            android:textColor="@color/black"
+            android:textSize="30sp"
             android:layout_marginEnd="30dp"
-            android:textSize="30dp">
+            android:layout_gravity="center">
         </TextView>
         <TextView
-            android:text="@string/vacio"
             android:id="@+id/puntaje4"
-            android:textSize="30dp">
+            android:text="@string/vacio"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_gravity="center">
         </TextView>
         <TextView
-            android:text="@string/vacio"
             android:id="@+id/jugador5"
+            android:text="@string/vacio"
+            android:textColor="@color/black"
+            android:textSize="30sp"
             android:layout_marginEnd="30dp"
-            android:textSize="30dp">
+            android:layout_gravity="center">
         </TextView>
         <TextView
-            android:text="@string/vacio"
             android:id="@+id/puntaje5"
-            android:textSize="30dp">
-        </TextView>
-        <TextView
             android:text="@string/vacio"
-            android:id="@+id/jugador6"
-            android:layout_marginEnd="30dp"
-            android:textSize="30dp">
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_gravity="center">
         </TextView>
-        <TextView
-            android:text="@string/vacio"
-            android:id="@+id/puntaje6"
-            android:textSize="30dp">
-        </TextView>
-
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/volverAlMenu"
-            android:text="@string/volver"/>
-
     </GridLayout>
+
+    <Button
+        android:id="@+id/volverAlMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/volver"
+        android:layout_marginTop="20dp"/>
+
 </LinearLayout>
