@@ -76,9 +76,12 @@ string gastronomia
 string geografia
 string historia
 string idiomas
+string ingres_tu_nombre
+string jugar
 string literatura
 string medicina
 string musica
+string para_guardar_tu_puntaje_en_el_ranking
 string ranking
 string reglas_completas
 string reglas_del_juego

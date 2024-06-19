@@ -23,10 +23,13 @@
     <string name="geografia">geografia</string>
     <string name="historia">historia</string>
     <string name="idiomas">idiomas</string>
+    <string name="ingres_tu_nombre">Ingresá tu nombre</string>
+    <string name="jugar">Jugar</string>
     <string name="literatura">literatura</string>
     <string name="medicina">medicina</string>
     <string name="musica">musica</string>
-    <string name="ranking">Ranking</string>
+    <string name="para_guardar_tu_puntaje_en_el_ranking">Para guardar tu puntaje en el ranking</string>
+    <string name="ranking" translatable="false">Ranking</string>
     <string name="reglas_completas">Elija una categoria, luego tendra que contestar tres preguntas de esa categoria, tendra cuatro opciones y una sola sera la correcta, cuenta con el uso de un comodin, el cual puede saltear una pregunta en caso de usarlo, al final de juego podra volver a jugar la misma categoria o volver al menu principal</string>
     <string name="reglas_del_juego">Reglas del juego</string>
     <string name="saltear_pregunta">Saltear Pregunta</string>

@@ -3893,7 +3893,9 @@ string hide_bottom_view_on_scroll_behavior
 string historia
 string icon_content_description
 string idiomas
+string ingres_tu_nombre
 string item_view_role_description
+string jugar
 string literatura
 string m3_exceed_max_badge_text_suffix
 string m3_ref_typeface_brand_medium
@@ -3997,6 +3999,7 @@ string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
 string musica
+string para_guardar_tu_puntaje_en_el_ranking
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

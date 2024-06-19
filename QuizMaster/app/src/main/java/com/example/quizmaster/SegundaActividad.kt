@@ -21,6 +21,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
+import org.json.JSONObject.numberToString
 
 
 class SegundaActividad : ComponentActivity() {
@@ -32,13 +33,15 @@ class SegundaActividad : ComponentActivity() {
     private var opcionCorrectaIndex: Int? = null
     private var preguntasCategoria = mutableListOf<JSONObject>()
     private val mainHandler = Handler(Looper.getMainLooper())
-    private var cantPreguntas=0
-    private var cantCorrectas=0
-    private var timer:CountDownTimer?=null
-    private var puntajeTotal=0
-    private var puntajeTimer=0
-    private var esTopCinco=false
-    private var nombre=""
+    private var cantPreguntas = 0
+    private var cantCorrectas = 0
+    private var timer: CountDownTimer? = null
+    private var puntajeTotal = 0
+    private var puntajeTimer = 0
+    private var esTopCinco = false
+    private var nombre = ""
+    private var preguntaActual: JSONObject? = null
+    private var tiempoRestante: Long=30000 //sirve para que no se reinicie el tiempo cuando se cambia a landscape (creo)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +54,12 @@ class SegundaActividad : ComponentActivity() {
         textViewCategoria.text = categoriaSeleccionada
         val extras = intent.extras
 
-        botonesOpcion = listOf(findViewById(R.id.opcion0), findViewById(R.id.opcion1), findViewById(R.id.opcion2), findViewById(R.id.opcion3))
+        botonesOpcion = listOf(
+            findViewById(R.id.opcion0),
+            findViewById(R.id.opcion1),
+            findViewById(R.id.opcion2),
+            findViewById(R.id.opcion3)
+        )
         textViewNombre.text = extras?.getString("jugador")
 
         val jsonStr: String? = loadJSONFromAsset("preguntas.json")
@@ -91,48 +99,56 @@ class SegundaActividad : ComponentActivity() {
             cantPreguntas++
             botonesOpcion.forEach { it.isEnabled = true }
             val btnComodin = findViewById<Button>(R.id.comodin)
-            val btnAyuda = findViewById<ImageButton>(R.id.helpButton)
-            btnComodin.isEnabled=true
+            btnComodin.isEnabled = true
             restablecerColoresBotones()
-            var preguntaSeleccionada: JSONObject? = null
-            do {
-                preguntaSeleccionada = preguntasCategoria.random()
-            } while (preguntasSeleccionadas.contains(preguntaSeleccionada))
-
-            val preguntaText = preguntaSeleccionada?.getString("question")
-            val opcionesArray = preguntaSeleccionada?.getJSONArray("options")
-            opcionCorrectaIndex = preguntaSeleccionada?.getInt("correctAnswerIndex") ?: -1
-
-            val textViewPregunta = findViewById<TextView>(R.id.textViewPregunta)
-            textViewPregunta.text = preguntaText
-
-            botonesOpcion.forEachIndexed { index, button ->
-                button.text = opcionesArray?.getString(index)
-
-                button.setOnClickListener {
-                    comprobarRespuesta(index)
-                }
-            }
-
-            btnAyuda.setOnClickListener{
-                val intent = Intent(this, AyudaActivity::class.java)
-                startActivity(intent)
-            }
-
-            btnComodin.setOnClickListener {
-                usarComodin()
-            }
-
-            iniciarTimer()
-
-            if (preguntaSeleccionada != null) {
-                preguntasSeleccionadas.add(preguntaSeleccionada)
-            }
             preguntasRestantes--
-        } else {
-            finDelJuego(cantCorrectas,cantPreguntas,seUsoComodin)
+            do {
+                preguntaActual = preguntasCategoria.random()
+            } while (preguntasSeleccionadas.contains(preguntaActual))
+            mostrarEnPantalla(preguntaActual)
+        }else
+        {
+            finDelJuego(cantCorrectas, cantPreguntas, seUsoComodin)
+
         }
     }
+
+    private fun mostrarEnPantalla(preguntaSeleccionada: JSONObject?) {
+        val preguntaText = preguntaSeleccionada?.getString("question")
+        val btnComodin = findViewById<Button>(R.id.comodin)
+        val btnAyuda = findViewById<ImageButton>(R.id.helpButton)
+        val opcionesArray = preguntaSeleccionada?.getJSONArray("options")
+        val contadorRespuestasCorrectas = findViewById<TextView>(R.id.contador)
+        contadorRespuestasCorrectas.text = (cantCorrectas).toString()+"/"+(cantPreguntas-1)
+        opcionCorrectaIndex = preguntaSeleccionada?.getInt("correctAnswerIndex") ?: -1
+
+        val textViewPregunta = findViewById<TextView>(R.id.textViewPregunta)
+        textViewPregunta.text = preguntaText
+
+        botonesOpcion.forEachIndexed { index, button ->
+            button.text = opcionesArray?.getString(index)
+
+            button.setOnClickListener {
+                comprobarRespuesta(index)
+            }
+        }
+
+        btnAyuda.setOnClickListener {
+            val intent = Intent(this, AyudaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnComodin.setOnClickListener {
+            usarComodin()
+        }
+
+        iniciarTimer()
+
+        if (preguntaSeleccionada != null) {
+            preguntasSeleccionadas.add(preguntaSeleccionada)
+        }
+    }
+
 
     private fun comprobarRespuesta(opcionSeleccionada: Int) {
         desactivarBotonesYTimer()
@@ -165,14 +181,15 @@ class SegundaActividad : ComponentActivity() {
 
     private fun iniciarTimer(){
         val timerId=findViewById<TextView>(R.id.timer)
-        timer?.cancel()
-        timer=object : CountDownTimer(30000,1000){
+        timer=object : CountDownTimer(tiempoRestante,1000){
             override fun onTick(millisUntilFinished: Long) {
                 timerId.text="${millisUntilFinished/1000}s"
                 puntajeTimer=(millisUntilFinished / 1000).toInt()
+                tiempoRestante=millisUntilFinished
             }
 
             override fun onFinish() {
+                tiempoRestante=30000
                 seAcaboElTiempo()
             }
         }.start()
@@ -257,6 +274,7 @@ class SegundaActividad : ComponentActivity() {
                     type = "text/plain"
                 }
                 startActivity(Intent.createChooser(intent, "Compartir tu puntaje a traves de"))
+                finDelJuego(contador,cantPreg,seUsoComo)
             }
         }
             builder.setCancelable(false)
@@ -267,33 +285,26 @@ class SegundaActividad : ComponentActivity() {
         val btnComodin = findViewById<Button>(R.id.comodin)
         btnComodin.isEnabled=false
         timer?.cancel()
+        tiempoRestante=30000
     }
     fun guardarEnRanking(nombreJugador: String, puntaje: Int) {
         val sharedPreferences = getSharedPreferences("ranking", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         val ranking = mutableListOf<Pair<String, Int>>()
-
-        // Cargar los valores existentes en el ranking
-        for (i in 0..4) {  // Cambiar el rango del índice a 0..4
+        for (i in 0..4) {
             val nombre = sharedPreferences.getString("jugador_$i", null)
             val puntos = sharedPreferences.getInt("puntaje_$i", -1)
             if (nombre != null && puntos != -1) {
                 ranking.add(Pair(nombre, puntos))
             }
         }
-
-        // Verificar si el nuevo puntaje entra en el top 5
         esTopCinco = if (ranking.size < 5) {
             true
         } else {
             puntaje > ranking.minByOrNull { it.second }?.second ?: -1
         }
-
-        // Agregar el nuevo puntaje y reordenar el ranking
         ranking.add(Pair(nombreJugador, puntaje))
         ranking.sortByDescending { it.second }
-
-        // Guardar los nuevos valores en SharedPreferences
         for (i in 0..4) {  // Cambiar el rango del índice a 0..4
             if (i < ranking.size) {
                 editor.putString("jugador_$i", ranking[i].first)
@@ -305,4 +316,52 @@ class SegundaActividad : ComponentActivity() {
         }
         editor.apply()
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        timer?.cancel()
+        outState.putInt("preguntasRestantes", preguntasRestantes)
+        outState.putBoolean("seUsoComodin", seUsoComodin)
+        outState.putInt("cantPreguntas", cantPreguntas)
+        outState.putInt("cantCorrectas", cantCorrectas)
+        outState.putInt("puntajeTotal", puntajeTotal)
+        outState.putInt("puntajeTimer", puntajeTimer)
+        outState.putString("nombre", nombre)
+        val jsonArray = JSONArray()
+        for (pregunta in preguntasSeleccionadas) {
+            jsonArray.put(pregunta)
+        }
+        outState.putString("preguntasSeleccionadas", jsonArray.toString())
+        outState.putString("categoriaSeleccionada", intent.getStringExtra("categoria"))
+        outState.putInt("opcionCorrectaIndex", opcionCorrectaIndex ?: -1)
+        outState.putString("preguntaActual", preguntaActual?.toString())
+        outState.putLong("tiempoRestante", tiempoRestante)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        preguntasRestantes = savedInstanceState.getInt("preguntasRestantes")
+        seUsoComodin = savedInstanceState.getBoolean("seUsoComodin")
+        cantPreguntas = savedInstanceState.getInt("cantPreguntas")
+        cantCorrectas = savedInstanceState.getInt("cantCorrectas")
+        puntajeTotal = savedInstanceState.getInt("puntajeTotal")
+        puntajeTimer = savedInstanceState.getInt("puntajeTimer")
+        nombre = savedInstanceState.getString("nombre", "")
+        val preguntasSeleccionadasStr = savedInstanceState.getString("preguntasSeleccionadas")
+        if (!preguntasSeleccionadasStr.isNullOrEmpty()) {
+            val jsonArray = JSONArray(preguntasSeleccionadasStr)
+            for (i in 0 until jsonArray.length()) {
+                preguntasSeleccionadas.add(jsonArray.getJSONObject(i))
+            }
+        }
+        intent.putExtra("categoria", savedInstanceState.getString("categoriaSeleccionada"))
+        opcionCorrectaIndex = savedInstanceState.getInt("opcionCorrectaIndex", -1)
+        tiempoRestante = savedInstanceState.getLong("tiempoRestante", 30000)
+        val preguntaActualStr = savedInstanceState.getString("preguntaActual")
+        if (!preguntaActualStr.isNullOrEmpty()) {
+            preguntaActual = JSONObject(preguntaActualStr)
+        }
+        mostrarEnPantalla(preguntaActual)
+    }
+
 }
